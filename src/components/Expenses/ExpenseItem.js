@@ -1,6 +1,7 @@
-import ExpenseDate from './ExpenseDate'
-import './ExpenseItem.css'
-function ExpenseItem(props) {
+import Card from '../UI/Card'
+import ExpenseDate from '../Expenses/ExpenseDate'
+import '../Expenses/ExpenseItem.css'
+const ExpenseItem=(props) =>{
 
     // const expenseDate=new Date(2021, 2 ,28)
     // const expenseTitle='Car Insurance'
@@ -9,7 +10,7 @@ function ExpenseItem(props) {
   
 
     return (
-        <div className='expense-item'>
+        <Card className='expense-item'>
                  {/* <div>{props.date.toISOString()}</div> */}
           
             <ExpenseDate date={props.date}/>
@@ -20,7 +21,7 @@ function ExpenseItem(props) {
                 <div className='expense-item__price'>${props.amount}</div>
             </div>
 
-        </div>
+        </Card>
     )
 }
 

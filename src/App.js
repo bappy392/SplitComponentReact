@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import ExpenseItem from './components/Expenses/ExpenseItem';
+import Card from './components/UI/Card';
 
-function App() {
+const App = ()=> {
 
   const expnese = [
     { id: 'e1', title: 'Car Insurance 1', amount: 194.67, date: new Date(2021, 2, 28) },
@@ -11,7 +12,7 @@ function App() {
     { id: 'e4', title: 'Car Insurance 4', amount: 494.67, date: new Date(2024, 6, 28) }
   ]
   return (
-    <div className="App">
+    <Card className="App">
       <h2>Bismillah</h2>
       <p>Let's start React App</p>
 
@@ -20,7 +21,7 @@ function App() {
       <ExpenseItem title={expnese[2].title} amount={expnese[2].amount} date={expnese[2].date} />
       <ExpenseItem title={expnese[3].title} amount={expnese[3].amount} date={expnese[3].date} />
 
-    </div>
+    </Card>
   );
 }
 
